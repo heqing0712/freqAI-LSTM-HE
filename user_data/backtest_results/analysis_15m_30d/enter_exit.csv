@@ -1,0 +1,8 @@
+enter_tag,exit_reason,trades,profit_usdt,wins,losses
+long,exit_long,221,-4170.7784117,46,175
+long,force_exit,2,-559.51911027,0,2
+long,roi,22,50.41816915,9,12
+long,trailing_stop_loss,106,3223.75173186,106,0
+short,exit_short,203,-1801.12990307,69,134
+short,roi,9,20.34702731,9,0
+short,trailing_stop_loss,78,2459.62933985,78,0

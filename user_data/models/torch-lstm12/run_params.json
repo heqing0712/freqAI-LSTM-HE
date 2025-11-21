@@ -1,0 +1,75 @@
+{
+    "freqai": {
+        "enabled": true,
+        "identifier": "torch-lstm12",
+        "train_period_days": 60,
+        "fit_live_predictions_candles": 12,
+        "backtest_period_days": 30,
+        "expiration_hours": 4,
+        "live_retrain_hours": 4,
+        "purge_old_models": 0,
+        "save_backtest_models": false,
+        "write_metrics_to_disk": true,
+        "activate_tensorboard": false,
+        "feature_parameters": {
+            "include_corr_pairlist": [
+                "BTC/USDT:USDT",
+                "ETH/USDT:USDT"
+            ],
+            "include_timeframes": [
+                "1h"
+            ],
+            "label_period_candles": 12,
+            "include_shifted_candidates": 12,
+            "DI_threshold": 10,
+            "weight_factor": 0.5,
+            "indicator_periods_candles": [
+                10,
+                20
+            ],
+            "noise_standard_deviation": 0.01,
+            "buffer_train_data_candles": 20,
+            "include_shifted_candles": 0,
+            "principal_component_analysis": false,
+            "use_SVM_to_remove_outliers": false,
+            "plot_feature_importances": 0,
+            "shuffle_after_split": false
+        },
+        "data_split_parameters": {
+            "test_size": 0.2,
+            "random_state": 42,
+            "shuffle": false
+        },
+        "model_training_parameters": {
+            "learning_rate": 0.003,
+            "trainer_kwargs": {
+                "n_steps": null,
+                "batch_size": 32,
+                "n_epochs": 10
+            },
+            "model_kwargs": {
+                "num_lstm_layers": 3,
+                "hidden_dim": 128,
+                "dropout_percent": 0.4,
+                "window_size": 5
+            }
+        },
+        "conv_width": 1,
+        "wait_for_training_iteration_on_reload": true,
+        "continual_learning": false,
+        "keras": false,
+        "override_exchange_check": false
+    },
+    "timeframe": "1h",
+    "stake_amount": 2000,
+    "stake_currency": "USDT",
+    "max_open_trades": Infinity,
+    "pairs": [
+        "BTC/USDT:USDT",
+        "ETH/USDT:USDT",
+        "BNB/USDT:USDT",
+        "SOL/USDT:USDT",
+        "LINK/USDT:USDT",
+        "ADA/USDT:USDT"
+    ]
+}
